@@ -18,11 +18,11 @@ const { tech, size, isLazy = true } = Astro.props;
             width={30}
             height={30}
             loading={isLazy ? "lazy" : "eager"}
-            class={`w-6 h-6 ${size === "medium" ? "md:w-8 md:h-8" : ""} ${size === "large" ? "lg:w-10 lg:h-10" : ""}`}
+            class={`w-4 h-4 sm:w-8 sm:h-8 lg:w-10 lg:h-10`}
         />
     </div>
     <p
-        class={`text-md   ${size === "medium" ? "md:text-xl" : ""} ${size === "large" ? "lg:text-2xl" : ""} text-neutral-950`}>
+        class={`text-sm sm:text-lg lg:text-2xl text-neutral-950`}>
         {tech}
     </p>
 </div>

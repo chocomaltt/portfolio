@@ -16,12 +16,12 @@ const AboutMotion = ({children}: {children: ReactNode}) => {
                 }}
                 viewport={{once:true, amount: 0.2}}
             >
-                <div className="flex flex-col justify-start text-justify mt-10 gap-8 px-10">
-                    <div className="gap-4 flex flex-col items-center max-md:items-start">
-                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-2 rounded-r-full text-4xl font-medium text-white">
+                <div className="flex flex-col justify-start text-justify mt-10 gap-8 px-10  lg:px-52 ">
+                    <div className="gap-4 flex flex-col lg:justify-center lg:items-center lg:bg-neutral-50 lg:p-14 lg:rounded-lg">
+                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-1 sm:py-2 rounded-r-full text-2xl sm:text-4xl font-medium text-white lg:w-fit lg:m-0 lg:px-10 lg:rounded-full">
                             About Me
                         </div>
-                        <p className="text-md  ">
+                        <p className="text-sm sm:text-lg">
                         3rd-year Informatics Engineering student with a robust background in computer science, software engineering, mathematics, and statistics. Passionate about machine learning research, I'm driven to excel as a machine learning engineer by solving challenging problems and continuously expanding my expertise.
                         <br/>
                         <br/>
@@ -29,9 +29,9 @@ const AboutMotion = ({children}: {children: ReactNode}) => {
                         </p>
                     </div>
 
-                    <div className="gap-4 flex flex-col items-center max-md:items-start">
-                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-2 rounded-r-full text-4xl font-medium   text-white">Technical Skills</div>
-                        <div className="flex gap-4 flex-wrap justify-center max-md:justify-start">
+                    <div className="gap-4 flex flex-col lg:justify-center lg:items-center lg:bg-neutral-50 lg:p-14 lg:rounded-lg">
+                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-1 sm:py-2 rounded-r-full text-2xl sm:text-4xl font-medium  text-white lg:w-fit lg:m-0 lg:px-10 lg:rounded-full">Technical Skills</div>
+                        <div className="flex gap-2 sm:gap-4 lg:gap-6 flex-wrap justify-start lg:justify-center">
                             {children}
                         </div>
                     </div>

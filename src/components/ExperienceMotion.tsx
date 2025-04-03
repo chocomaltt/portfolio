@@ -35,21 +35,21 @@ const ExperienceMotion = () => {
                 }}
                 viewport={{once:true, amount: 0.2}}
             >
-                <div className="w-full h-full flex flex-col justify-start text-right gap-8 px-10 mt-10">
-                        <div className="bg-orange-400 -mr-10 pr-10 py-2 rounded-l-full text-4xl font-medium text-white">
+                <div className="flex flex-col justify-start items-end text-right gap-4 mt-10 lg:mx-52 lg:p-14 lg:items-center lg:bg-neutral-50 lg:rounded-lg">
+                        <div className="w-full text-end bg-orange-400 -mr-10 pl-5 pr-20 py-1 sm:py-2 rounded-l-full text-2xl sm:text-4xl font-medium text-white lg:text-center lg:m-0 lg:rounded-full">
                             Professional Experience
                         </div>
-                        <div className="flex flex-col items-end gap-3">
-                            <p className="text-xl font-semibold">{experienceDetails.company} <span className="font-light text-md">| {experienceDetails.location}</span> </p>
-                            <div className="bg-red-700 w-fit p-1 rounded-md shadow-lg text-xs text-white">
+                        <div className="flex flex-col items-end gap-3 px-10 lg:items-start">
+                            <p className="text-lg sm:text-2xl font-semibold">{experienceDetails.company} <span className="font-light text-base sm:text-xl">| {experienceDetails.location}</span> </p>
+                            <div className="bg-red-700 w-fit p-1 rounded-md shadow-lg text-xs sm:text-base text-white">
                                 Internship
                             </div>
-                            <div className="font-semibold">{experienceDetails.position} <p className="text-sm text-neutral-600 font-medium">{experienceDetails.duration}</p></div>
+                            <div className="text-sm sm:text-lg font-semibold">{experienceDetails.position} <p className="text-sm sm:text-lg text-neutral-600 font-medium">{experienceDetails.duration}</p></div>
                             
-                            <p className="text-justify">{experienceDetails.description}</p>
-                            <div className="flex gap-2 justify-between flex-wrap">
+                            <p className="text-sm sm:text-lg text-justify">{experienceDetails.description}</p>
+                            <div className="flex gap-1 justify-between flex-wrap">
                                 {experienceDetails.technologies.map((tech) => (
-                                    <div className="p-1 bg-white border-2 border-neutral-300 rounded-md text-sm shadow-lg">{tech}</div>
+                                    <div className="p-1 sm:p-2 bg-white border-2 border-neutral-300 rounded-md text-sm sm:text-lg shadow-lg">{tech}</div>
                                 ))}
                             </div>
                         </div>

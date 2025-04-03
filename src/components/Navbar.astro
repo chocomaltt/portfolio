@@ -4,13 +4,12 @@ import NavbarItem from "./NavbarItem";
 
 <div class="w-full flex justify-center overflow-hidden static" id="navbar">
     <nav
-        class="fixed bottom-0 px-7 py-2 mb-3 w-fit rounded-full items-center flex justify-center bg-neutral-950 z-50">
+        class="fixed bottom-0 px-3.5 py-2 sm:px-7 sm:py-4 mb-3 w-fit rounded-full items-center flex justify-center bg-neutral-950 z-50">
         <ul class="w-full flex justify-evenly font-semibold text-white">
             <NavbarItem client:load href="#home" label="Home" />
             <NavbarItem client:load href="#about" label="About" />
             <NavbarItem client:load href="#experience" label="Experience" />
             <NavbarItem client:load href="#projects" label="Projects" />
-            <NavbarItem client:load href="#cv" label="CV" />
         </ul>
     </nav>
 </div>

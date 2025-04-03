@@ -31,16 +31,16 @@ const social = [
 
 const Contact: React.FC = () => {
     return (
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-3 sm:gap-6">
             <a
                 href={social.find(({title}) => title === "cv")?.href}
                 download
-                className="mt-4 px-6 py-2 max-sm:p-3 max-sm:text-sm bg-white text-black rounded-md flex gap-2 items-center transition-transform duration-300 ease-in-out hover:-translate-y-1"
+                className="mt-2 px-3 sm:mt-4 sm:px-6 py-2 text-xs sm:text-xl bg-white text-black rounded-md flex gap-1 sm:gap-5 items-center transition-transform duration-300 ease-in-out hover:-translate-y-1"
             >
                 Check Out My CV!
-                <FileUser size={20}/>
+                <FileUser size={20} className='w-4 h-4'/>
             </a>
-            <div className="flex gap-6">
+            <div className="flex gap-6 sm:gap-14">
                 {social.map(({href, title, ariaLabel, icon: Icon}) => (
                     title !== "cv" &&
                     <a
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={ariaLabel}
-                        className={`flex items-center justify-center w-10 h-10 border-2  ${Icon === 'Github'? 'border-neutral-950 bg-white':''} ${Icon === 'Linkedin'? 'border-blue-500/50 bg-[#0077B5]':''} ${Icon === 'Mail'? 'bg-white':''} rounded text-white transition-transform duration-300 ease-in-out hover:-translate-y-1`}
+                        className={`flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 border-2 ${Icon === 'Github'? 'border-neutral-950 bg-white':''} ${Icon === 'Linkedin'? 'border-blue-500/50 bg-[#0077B5]':''} ${Icon === 'Mail'? 'bg-white':''} rounded text-white transition-transform duration-300 ease-in-out hover:-translate-y-1`}
                     >
                         {Icon !== 'Linkedin' && (
                             <img

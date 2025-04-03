@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+    tech: string;
+    size: "small" | "medium" | "large";
+    isLazy?: boolean;
+}
+
+const { tech, size, isLazy = true } = Astro.props;
+---
+
+<div
+    class="bg-white rounded-lg p-2 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+    <div class="relative block">
+        <Image
+            src={`/assets/icons/${tech}.svg`}
+            alt={`${tech}`}
+            width={30}
+            height={30}
+            loading={isLazy ? "lazy" : "eager"}
+            class={`w-6 h-6 ${size === "medium" ? "md:w-8 md:h-8" : ""} ${size === "large" ? "lg:w-10 lg:h-10" : ""}`}
+        />
+    </div>
+    <p
+        class={`text-md   ${size === "medium" ? "md:text-xl" : ""} ${size === "large" ? "lg:text-2xl" : ""} text-neutral-950`}>
+        {tech}
+    </p>
+</div>
+
+<style>
+    .small {
+        font-size: 0.875rem;
+    }
+
+    .medium {
+        font-size: 1rem;
+    }
+
+    .large {
+        font-size: 1.25rem;
+    }
+</style>

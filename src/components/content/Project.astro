@@ -1,0 +1,29 @@
+---
+import {getCollection} from "astro:content";
+import type {Project} from "@/model/projects";
+import ProjectCard from "@/components/ProjectCard";
+import React from "react";
+
+const personalProjects = await getCollection("projects");
+const sortedPersonalProjects = personalProjects.sort(
+    (a: Project, b: Project) => (a.data.date > b.data.date ? -1 : 1)
+);
+---
+
+<section class="w-full min-h-screen overflow-hidden relative px-10" id="projects">
+    <div class="flex flex-col w-full items-center mt-10">
+            {
+                sortedPersonalProjects.map(
+                    (project: Project, index: number) => (
+                        <ProjectCard
+                        project={project.data}
+                        href={`assets/projects/${project.slug}.svg`}
+                        isReverse={index % 2 === 0}
+                        isFirst={index === 0}
+                        client:load
+                        />
+                    )
+                )
+            }
+    </div>
+</section>

@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Layout from "../layouts/main.astro";
 // Component Imports
-import Button from "../components/Button.astro";
+import SplashScreen from "@/components/SplashScreen";
 import Home from "../components/content/Home.astro";
 import About from "@/components/content/About.astro";
 import Experience from "@/components/content/Experience.astro";
@@ -15,6 +15,7 @@ import Footer from "@/components/content/Footer.astro";
 
 <div>
 	<Layout>
+		<SplashScreen client:idle/>
 		<Home />
 		<About />
 		<Experience />

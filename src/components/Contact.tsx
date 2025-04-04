@@ -1,6 +1,6 @@
 import React from 'react';
 import {Mail, FileUser} from "lucide-react";
-import cv from "@/assets/CV_Machine Learning Engineer Intern_Reza Arya Wijaya_Revised.pdf";
+import cv from "@/assets/CV_Machine Learning Engineer Intern_Reza Arya Wijaya.pdf";
 
 const social = [
     {

@@ -9,12 +9,11 @@ const textOptions = [
 const HomeSlider = () => {
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  // Set the delay based on splash screen timing:
-  const splashDuration = 2000; // or your custom duration value
+  
+  const splashDuration = 3000;
   const splashFadeDelay = 500;
-  const totalSplashTime = splashDuration + splashFadeDelay; // e.g., 5500 ms
+  const totalSplashTime = splashDuration + splashFadeDelay;
 
-  // Delay starting the slider animation until after the splash screen disappears
   const [started, setStarted] = useState(false);
 
   useEffect(() => {
@@ -23,13 +22,13 @@ const HomeSlider = () => {
   }, [totalSplashTime]);
 
   useEffect(() => {
-    if (!started) return; // Do not start until after the splash screen is gone
+    if (!started) return;
     const interval = setInterval(() => {
-      setIsVisible(false); // Start fade-out effect
+      setIsVisible(false);
       setTimeout(() => {
         setIndex((prevIndex) => (prevIndex + 1) % textOptions.length);
-        setIsVisible(true); // Fade-in new text
-      }, 500); // Match the CSS fade duration
+        setIsVisible(true);
+      }, 500);
     }, 3000);
     return () => clearInterval(interval);
   }, [started]);

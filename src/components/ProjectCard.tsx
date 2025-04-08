@@ -128,17 +128,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, href, isReverse, isF
                     className="flex items-center justify-center w-full mt-10 max-md:mt-0"
                 >
                     <div className={cn(
-                        "flex self-center gap-4 max-lg:flex-col-reverse lg:w-full",
+                        "flex self-center gap-4 max-2xl:flex-col-reverse 2xl:w-full",
                         isReverse ? "flex-row-reverse" : "flex-row"
                     )}>
                         {imageExists && (
                             <>
                                 {windowWidth <= 1024 ? (
-                                    <div className="w-full flex flex-col gap-4 order-1 lg:hidden">
+                                    <div className="w-full flex flex-col gap-4 order-1 2xl:hidden">
                                         <img src={href} alt="cover" className="rounded-lg shadow-xl" loading="eager" />
                                     </div>
                                 ) : (
-                                    <div className="w-full hidden flex-col gap-4 order-1 lg:flex">
+                                    <div className="w-full hidden flex-col gap-4 order-1 2xl:flex">
                                         <img src={href} alt="cover" className="rounded-lg shadow-xl" loading="eager" />
                                         <div className="flex flex-wrap gap-6 pt-2">
                                             {project.stack.map((stack, index) => (
@@ -156,7 +156,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, href, isReverse, isF
                             <p className="text-sm sm:text-lg text-justify text-neutral-950 mt-2 sm:mt-4 leading-relaxed">{project.description}</p>
 
                             {(project.sourceClient || project.sourceModel || project.sourceServer || project.sourceColab) && (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 w-fit mt-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-2 w-fit mt-4">
                                     {project.sourceClient && (
                                         <GithubLink url={project.sourceClient} text="Client Source" />
                                     )}

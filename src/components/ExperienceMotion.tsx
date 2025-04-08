@@ -35,16 +35,16 @@ const ExperienceMotion = () => {
                 }}
                 viewport={{once:true, amount: 0.2}}
             >
-                <div className="flex flex-col justify-start items-end text-right gap-4 mt-10 lg:mx-52 lg:p-14 lg:items-center lg:bg-neutral-50 lg:rounded-lg">
-                        <div className="w-full text-end bg-orange-400 -mr-10 pl-5 pr-20 py-1 sm:py-2 rounded-l-full text-2xl sm:text-4xl font-medium text-white lg:text-center lg:m-0 lg:rounded-full">
+                <div className="flex flex-col justify-start items-end text-right gap-4 mt-10 2xl:mx-52 2xl:p-14 2xl:items-center 2xl:bg-neutral-50 2xl:rounded-lg">
+                        <div className="w-full text-end bg-orange-400 -mr-10 pl-5 pr-20 py-1 sm:py-2 rounded-l-full text-2xl sm:text-4xl font-medium text-white 2xl:text-center 2xl:m-0 2xl:rounded-full">
                             Professional Experience
                         </div>
-                        <div className="flex flex-col items-end gap-3 px-10 lg:items-start">
+                        <div className="flex flex-col items-end gap-3 px-10 2xl:items-start">
                             <p className="text-lg sm:text-2xl font-semibold">{experienceDetails.company} <span className="font-light text-base sm:text-xl">| {experienceDetails.location}</span> </p>
                             <div className="bg-red-700 w-fit p-1 rounded-md shadow-lg text-xs sm:text-base text-white">
                                 Internship
                             </div>
-                            <div className="text-sm sm:text-lg font-semibold">{experienceDetails.position} <p className="text-sm sm:text-lg text-neutral-600 font-medium">{experienceDetails.duration}</p></div>
+                            <div className="text-sm sm:text-lg font-semibold 2xl:text-justify">{experienceDetails.position} <p className="text-sm sm:text-lg text-neutral-600 font-medium">{experienceDetails.duration}</p></div>
                             
                             <p className="text-sm sm:text-lg text-justify">{experienceDetails.description}</p>
                             <div className="flex gap-1 justify-between flex-wrap">

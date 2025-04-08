@@ -11,7 +11,7 @@ const ImageSlider = () => {
   const [started, setStarted] = useState(false);
 
   // Splash screen timing: progress duration + fade-out delay.
-  const splashDuration = 2000; // e.g. 5000ms for the progress bar
+  const splashDuration = 3000; // e.g. 5000ms for the progress bar
   const splashFadeDelay = 500; // extra 500ms fade-out time
   const totalSplashTime = splashDuration + splashFadeDelay; // 5500ms
 
@@ -39,7 +39,7 @@ const ImageSlider = () => {
     <img
       src={images[index].src}
       alt="Animated Profile"
-      className={`w-11/12 sm:w-full lg:w-full sm:h-[800px] object-cover bottom-0 rounded-b-[30px] transition-opacity duration-500 ${
+      className={`w-11/12 sm:w-full 2xl:w-full sm:h-[800px] 2xl:h-11/12 object-cover bottom-0 rounded-b-[30px] transition-opacity duration-500 ${
         isFadingOut ? "opacity-0" : "opacity-100"
       }`}
       loading="lazy"

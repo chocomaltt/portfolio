@@ -5,7 +5,7 @@ interface SplashScreenProps {
   duration?: number; // Duration (in ms) for progress to reach 100%
 }
 
-const SplashScreen: React.FC<SplashScreenProps> = ({ duration = 2000 }) => {
+const SplashScreen: React.FC<SplashScreenProps> = ({ duration = 3000 }) => {
   const [progress, setProgress] = useState(0);
   const [showSplash, setShowSplash] = useState(true);
 
@@ -41,9 +41,9 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ duration = 2000 }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[999] flex items-center justify-center bg-white"
+          className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-white gap-5"
         >
-          <div className="relative w-3/4 md:w-1/2 lg:w-1/3 h-8 bg-gray-200 rounded-full overflow-hidden">
+          <div className="relative w-3/4 md:w-1/2 2xl:w-1/3 h-8 bg-gray-200 rounded-full overflow-hidden">
             <div
               className="absolute top-0 left-0 h-full bg-orange-500 transition-all duration-50 rounded-l-full"
               style={{ width: `${progress}%` }}
@@ -55,6 +55,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ duration = 2000 }) => {
               {Math.round(progress)}%
             </div>
           </div>
+          <span className='text-neutral-700'>Relax while we load the content for you...</span>
           <style>
             {`
               .wave-overlay {

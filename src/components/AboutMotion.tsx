@@ -16,9 +16,9 @@ const AboutMotion = ({children}: {children: ReactNode}) => {
                 }}
                 viewport={{once:true, amount: 0.2}}
             >
-                <div className="flex flex-col justify-start text-justify mt-10 gap-8 px-10  lg:px-52 ">
-                    <div className="gap-4 flex flex-col lg:justify-center lg:items-center lg:bg-neutral-50 lg:p-14 lg:rounded-lg">
-                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-1 sm:py-2 rounded-r-full text-2xl sm:text-4xl font-medium text-white lg:w-fit lg:m-0 lg:px-10 lg:rounded-full">
+                <div className="flex flex-col justify-start text-justify mt-10 gap-8 px-10  2xl:px-52 ">
+                    <div className="gap-4 flex flex-col 2xl:justify-center 2xl:items-center 2xl:bg-neutral-50 2xl:p-14 2xl:rounded-lg">
+                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-1 sm:py-2 rounded-r-full text-2xl sm:text-4xl font-medium text-white 2xl:w-fit 2xl:m-0 2xl:px-10 2xl:rounded-full">
                             About Me
                         </div>
                         <p className="text-sm sm:text-lg">
@@ -29,9 +29,9 @@ const AboutMotion = ({children}: {children: ReactNode}) => {
                         </p>
                     </div>
 
-                    <div className="gap-4 flex flex-col lg:justify-center lg:items-center lg:bg-neutral-50 lg:p-14 lg:rounded-lg">
-                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-1 sm:py-2 rounded-r-full text-2xl sm:text-4xl font-medium  text-white lg:w-fit lg:m-0 lg:px-10 lg:rounded-full">Technical Skills</div>
-                        <div className="flex gap-2 sm:gap-4 lg:gap-6 flex-wrap justify-start lg:justify-center">
+                    <div className="gap-4 flex flex-col 2xl:justify-center 2xl:items-center 2xl:bg-neutral-50 2xl:p-14 2xl:rounded-lg">
+                        <div className="bg-neutral-950 -ml-10 pl-10 pr-5 py-1 sm:py-2 rounded-r-full text-2xl sm:text-4xl font-medium  text-white 2xl:w-fit 2xl:m-0 2xl:px-10 2xl:rounded-full">Technical Skills</div>
+                        <div className="flex gap-2 sm:gap-4 2xl:gap-6 flex-wrap justify-start 2xl:justify-center">
                             {children}
                         </div>
                     </div>
